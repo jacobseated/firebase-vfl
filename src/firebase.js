@@ -5,17 +5,19 @@ import { initializeApp } from "firebase/app";
 
 // Firebase Config
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-};
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
-export const db = getFirestore(firebaseApp);
+const db = getFirestore(firebaseApp);
+export { firebaseApp, db };
+
 
 // --------------
 // CRUD Functions
